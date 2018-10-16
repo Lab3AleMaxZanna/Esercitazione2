@@ -5,6 +5,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{siunitx}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \newcommand{\rem}[1]{[\emph{#1}]}
 \newcommand{\exn}{\phantom{xxx}}
@@ -20,17 +21,17 @@
 \subsection{}
 \label{passa-basso}
 
-I valori misurati sono: $R_1  = (3.24\pm 0.03 )K\Omega$ e  $C_1  = (9.7\pm 0.4 )nF$.
+I valori misurati sono: $R_1  = (3.24\pm 0.03 )\si{\kilo\ohm}$ e  $C_1  = (9.7\pm 0.4 )\si{\nano\farad}$.
 
-a) La frequenza di taglio teorica è  $f_T = 1/2\pi R_1 C_1$ che in base ai valori viene $f_T = 5.09\pm 0.21)KHz$\\
+a) La frequenza di taglio teorica è  $f_T = 1/2\pi R_1 C_1$ che in base ai valori viene $f_T = 5.09\pm 0.21)\si{\kilo\hertz}$\\
 b) A bassa frequenza la funzione di guadagno vale \[1-\frac{f^2}{2ft^2}\] dove la condizione è \[2\pi RCf\ll1\]
-c)A $2kHz$ il guadagno vale \[A=0.93\pm0.01\]
-d)A $20kHz$ il guadagno vale \[A=0.24\pm0.01\]. Notiamo che già non siamo più nel regime di basse frequenze per usare la formula del punto b).
-\subsection{}{2.b Partitore con resistenze da circa 1~k}
+c)A $2\si{\kilo\hertz}$ il guadagno vale \[A=0.93\pm0.01\]
+d)A $20\si{\kilo\hertz}$ il guadagno vale \[A=0.24\pm0.01\]. Notiamo che già non siamo più nel regime di basse frequenze per usare la formula del punto b).
+\subsection{}{2.b Partitore con resistenze da circa 1~\si{\kilo\ohm}}
 Valori misurati $R_1$ e $R_2$ e valore atteso di $A_\mathrm{exp}$:
 \[
-R_1 = (0.988  \pm0.008  ) \,\mathrm{k}\Omega, \quad
-R_2 = (1.187 \pm 0.01 ) \,\mathrm{k}\Omega, \quad
+R_1 = (0.988  \pm0.008  ) \,\si{\kilo\ohm}, \quad
+R_2 = (1.187 \pm 0.01 ) \,\si{\kilo\ohm}, \quad
 A_\mathrm{exp} = ( 0.544 \pm 0.002 ) 
 \]
 
@@ -39,8 +40,8 @@ A_\mathrm{exp} = ( 0.544 \pm 0.002 )
 
 \subsection{}
 
-La misura del tempo di salita è $ t_{sal} = (70\pm 5)\mu s$
-\[ f_t = \frac{1.1}{\pi t_{sal}} = (5.00 \pm 0.36) kHz \]
+La misura del tempo di salita è $ t_{sal} = (70\pm 5)\si{\micro\second}$
+\[ f_t = \frac{1.1}{\pi t_{sal}} = (5.00 \pm 0.36) \si{\kilo\hertz} \]
 
 \subsection{}
 a) l'impedenza di ingresso del circuito è
@@ -55,15 +56,15 @@ a) l'impedenza di ingresso del circuito è
 b)  Se $R_c$ è la resistenza di carico e $A_1$ la funzione di trasferimento del passa-basso senza il carico,  la nuova funzione di trasferimento diventa:
 \[ A_{1c} = v_{out}/v_{in}= \frac{A_1}{1+\frac{R_1}{R_c}A_1}\]
 
-Si vede che $A_{1c} \sim A_{1}$ nel limite in cui $R_1 \ll R_c$, che risulta ragionevolmente vero per $R_c = 100 k\Omega$.
+Si vede che $A_{1c} \sim A_{1}$ nel limite in cui $R_1 \ll R_c$, che risulta ragionevolmente vero per $R_c = 100 \si{\kilo\ohm}$.
 
-Nel caso in cui $R_c = 10 \, k\Omega$, $A_{1c}$ è sensibilmente diversa: 
+Nel caso in cui $R_c = 10 \, \si{\kilo\ohm}$, $A_{1c}$ è sensibilmente diversa: 
 
 max $|A_{1c}|= \frac{1}{1+R_1/R_C}=0.755$ (il guadagno massimo è minore di 1) e la frequenza di taglio  aumenta $f_{tc}= 1.18 f_{t}$.
 
 \section{Filtro Passa-banda}
 \subsection{}
-Ivalori di $R_1$ e $C_1$ sono quelli della sezione \ref{passa-basso}, mentre i valori misurati di $C_2$ e $R_2$ sono $R_2  = (3.28 \pm 0.03 )K\Omega$ e  $C_2  = (102\pm 4 )nF$
+Ivalori di $R_1$ e $C_1$ sono quelli della sezione \ref{passa-basso}, mentre i valori misurati di $C_2$ e $R_2$ sono $R_2  = (3.28 \pm 0.03 )\si{\kilo\ohm}$ e  $C_2  = (102\pm 4 )\si{\nano\farad}$
 
 \section*{Dichiarazione}
 I firmatari di questa relazione dichiarano che il contenuto della relazione \`e originale, con misure effettuate dai membri del gruppo, e che tutti i firmatari hanno contribuito alla elaborazione della relazione stessa.
