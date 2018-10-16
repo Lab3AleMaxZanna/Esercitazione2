@@ -15,14 +15,17 @@
 \date{4 ottobre 2018}
 \maketitle
 
-\setcounter{section}{1}
-\section{Filtro passa-basso}
-I valori misurati sono: $R_1  = (3.24\pm 0.03 )K\Omega$ e  $C_1  = (9.66\pm 0.40 )nF$.
 
-a) La frequenza di taglio teorica è  $f_T = 1/2\pi R_1 C_1$ che in base ai valori viene $f_T = 5.09\pm 0.21)KHz$
+\section{Filtro Passa-basso}
+\subsection{}
 
+I valori misurati sono: $R_1  = (3.24\pm 0.03 )K\Omega$ e  $C_1  = (9.7\pm 0.4 )nF$.
 
-\paragraph{2.b Partitore con resistenze da circa 1~k}
+a) La frequenza di taglio teorica è  $f_T = 1/2\pi R_1 C_1$ che in base ai valori viene $f_T = 5.09\pm 0.21)KHz$\\
+b) A bassa frequenza la funzione di guadagno vale \[1-\frac{f^2}{2ft^2}\] dove la condizione è \[2\pi RCf\ll1\]
+c)A $2kHz$ il guadagno vale \[A=0.93\pm0.01\]
+d)A $20kHz$ il guadagno vale \[A=0.24\pm0.01\]. Notiamo che già non siamo più nel regime di basse frequenze per usare la formula del punto b).
+\subsection{}{2.b Partitore con resistenze da circa 1~k}
 Valori misurati $R_1$ e $R_2$ e valore atteso di $A_\mathrm{exp}$:
 \[
 R_1 = (0.988  \pm0.008  ) \,\mathrm{k}\Omega, \quad
@@ -31,150 +34,33 @@ A_\mathrm{exp} = ( 0.544 \pm 0.002 )
 \]
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline 
-VIN& $\sigma$ VIN  &VOUT	 & $\sigma$ VOUT& VOUT/VIN & $\sigma$ VOUT/VIN \\
-\hline 
-1.121 & 0.005 & 0.612 & 0.003 & 0.546 & 0.005\\
-1.944& 0.010 & 1.062& 0.005 & 0.546 & 0.005\\
-
-3.59& 0.02 & 1.955 & 0.010 & 0.544 & 0.005\\
-
-4.68 & 0.03 & 2.55 & 0.02 & 0.545 & 0.005\\
-6.46 & 0.03 & 3.52 & 0.02 & 0.545& 0.005\\
-6.51 & 0.03& 3.55 & 0.02& 0.545 & 0.005 \\
-8.49 & 0.04 & 4.63& 0.03 & 0.545& 0.005\\
-9.89 & 0.05 & 5.40 & 0.03 & 0.546 & 0.005\\
 
 
-\hline 
-\end{tabular} 
-\caption{(2.b) Partitore di tensione con resistenze da circa 1k. Tutte le tensioni in V.\label{t:par1}}
-\end{table}
+\subsection{}
+
+La misura del tempo di salita è $ t_{sal} = (70\pm 5)\mu s$
+\[ f_t = \frac{1.1}{\pi t_{sal}} = (5.00 \pm 0.36) kHz \]
+
+\subsection{}
+a) l'impedenza di ingresso del circuito è
+\begin{itemize}
+
+\item a bassa frequenza  infinita, è un circuito aperto per la presenza del condensatore.
+\item ad alta frequenza $Z_{circuito}\sim R_1$, perchè l'impedenza del condensatore è trascurabile
+\item alla frequenza di taglio  $Z_{circuito} = R_1(1-j)$.
+
+\end{itemize}
+
+b)  Se $R_c$ è la resistenza di carico e $A_1$ la funzione di trasferimento del passa-basso senza il carico,  la nuova funzione di trasferimento diventa:
+\[ A_{1c} = v_{out}/v_{in}= \frac{A_1}{1+\frac{R_1}{R_c}A_1}\]
+
+Si vede che $A_{1c} \sim A_{1}$ nel limite in cui $R_1 \ll R_c$, che risulta ragionevolmente vero per $R_c = 100 k\Omega$.
+
+Nel caso in cui $R_c = 10 \, k\Omega$, $A_{1c}$ è sensibilmente diversa: 
+
+max $|A_{1c}|= \frac{1}{1+R_1/R_C}=0.755$ (il guadagno massimo è minore di 1) e la frequenza di taglio  aumenta $f_{tc}= 1.18 f_{t}$.
 
 
-
-Il valore calcolato $A_{fit}$ dal fit lineare è $ 0.5452\pm0.0003$, dal grafico (e da un  calcolo del $\chi^2$) si vede come gli errori sono piuttosto sovrastimati. Questo  è dovuto al fatto che la maggior parte dell'errore del multimetro sui Voltaggi è dovuto a un fattore di scala, che risulta ininfluente nel rapporto fra due misure effettuate con lo stesso fondoscala  (che è il caso della quasi totalità delle misure).
-
-
-\paragraph{2.c Partitore con resistenze da circa 4M}
-Valori misurati $R_1$ e $R_2$ e valore atteso di $A_\mathrm{exp}$:
-\[
-R_1 = ( 4.66 \pm 0.05 ) \,\mathrm{M}\Omega, \quad
-R_2 = ( 3.25 \pm 0.04 ) \,\mathrm{M}\Omega, \quad
-A_\mathrm{exp} = ( 0.41 \pm0.02 ) 
-\]
-
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline 
-VIN& $\sigma$ VIN  &VOUT	 & $\sigma$ VOUT& VOUT/VIN & $\sigma$ VOUT/VIN \\
-\hline 
-1.965 & 0.010 & 0.675 & 0.004 & 0.345 & 0.003 \\
-2.58 & 0.02 & 0.891 & 0.004 & 0.345 & 0.003 \\
-5.12 & 0.03 & 1.763 & 0.008 & 0.344 & 0.003 \\
-3.97 & 0.02 & 1.367 & 0.005 & 0.344 & 0.003 \\
-6.93 & 0.04 & 2.39 & 0.02 & 0.345 & 0.003 \\
-8.67 & 0.04 & 2.98 & 0.02 & 0.344 & 0.003 \\
-10.12 & 0.05 & 3.49 & 0.02 & 0.345 & 0.003\\
-
-
-\hline 
-\end{tabular} 
-\caption{(2.c) Partitore di tensione con resistenze da circa 4M. Tutte le tensioni in V.\label{t:par2}}
-\end{table}
-
-
-
-
-Come prima, dal grafico stimiamo $A_{fit}=0.3443\pm0.0004$, non compatibile col valore atteso; ciò significa che il modello è sbagliato e la resistenza del tester non è trascurabile
-
-
-
-\paragraph{2.d Resistenza di ingresso del tester}
-Usando il modello mostrato nella scheda si ottiene
-\[ \frac{R_1}{R_T} =  \frac{V_{IN}}{V_{OUT}} - (1 +  \frac{R_1}{R_2} )
-\]
-
-Con i dati del punto 2.b si ottiene
-\[ R_1/R_T = 0.003 \pm  0.007   \rightarrow  R_T > 100 k\Omega
-\]
-
-
-Con i dati del punto 2.c si ottiene
-\[ R_1/R_T = 0.47  \pm0.02  \exn   \rightarrow  R_T = (9.9 \pm  0.5)  M\Omega
-\]
-
-
-L'incertezza è sovrastimata perchè gli errori di $R_1$ e $R_2$ non sono scorrelati, essendo misure fatte con lo stesso fondoscala. In particolare considerando l'errore sistematico come un fattore di scala viene che l'incertezza sul rapporto dipende solo dall'incertezza sull'ultimo digit.
-
-\section{Uso dell'oscilloscopio}
-
-\paragraph{3.b Misure di tensione} 
-Vengono ripetute le misure del punto 2.c  ma con pochi punti e senza grafico
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline 
-VIN& $\sigma$ VIN  &VOUT	 & $\sigma$ VOUT& VOUT/VIN & $\sigma$ VOUT/VIN \\
-\hline 
-
-3.0 & 0.02 & 0.527 & 0.016 & 0.176 & 0.010 \\
-4.26 & 0.02 & 0.635 & 0.02 & 0.149 & 0.008 \\
-5.58 & 0.03 & 0.866 & 0.025 & 0.155 & 0.008 \\
-6.86 & 0.03 & 1.01 & 0.03 & 0.147 & 0.008\\
-7.67 & 0.04 & 1.17 & 0.04 & 0.153 & 0.009\\
-8.31 & 0.04 & 1.24 & 0.04 & 0.149 & 0.008\\
-9.91 & 0.05 & 1.45 & 0.07 & 0.146 & 0.008 \\
-\hline 
-\end{tabular} 
-\caption{(3.b) Partitore di tensione con resistenze da circa 4M, misura con oscilloscopio. Tutte le tensioni in V.}
-\end{table}
-
-La stima di $V_{out}/{V_{in}}$ dà come risultato $0.153\pm0.006$
-
-
-
-\paragraph{3.d Impedenza di ingresso dell'oscilloscopio} Si ripete l'analisi del punto 2.d
-
-\[ R_1/R_{IN} = 4.10  \pm  0.26  \rightarrow  R_{IN} = (1.14 \pm  0.06)  M\Omega
-\]
-
-
-\section{Misure di frequenza e tempo}
-
-\paragraph{4.b Misure di frequenza}
-Misure con onda sinusoidale
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline 
-Periodo T ($\mu$ s)& $\sigma$ T ($\mu$ s)  &Frequenza f (KHz) & $\sigma$ f (KHz) & Misura oscilloscopio (KHz) & Differenza (KHz)\\
-\hline 
-$1.56\cdot 10^3$& 10 & 0.641 & 0.004 & 0.640 &0.001\\
-157 & 1 & 6.36 & 0.04& 6.33 &0.03\\
-15.5& 0.1 & 64.5 & 0.4 & 64.1 &0.4 \\
-1.15 & 0.01 & 869& 5 & 870 &1 \\
-\hline 
-\end{tabular} 
-\caption{(4.b) Misura di frequenza di onde sinusoidali  e confronto con misurazione interna dell'oscilloscopio }
-\end{table}
-
-
-\section{Trigger dell'oscilloscopio}
-\paragraph{5.b Segnale pulse}
-Misure con segnale pulse del generatore di onde
-
-
-\clearpage
-\section{Conclusioni e commenti finali}
-Il valore $R_T = (9.9 \pm  0.5)  M\Omega$ è in accordo con il valore di $10M\Omega$  riportato sul manuale del tester.
-
-La deviazione di $R_{IN}  = (1.14 \pm  0.06)  M\Omega$ dal valore nominale dell'impedenza d'ingresso dell'oscilloscopio $R_{nom}= 1M\Omega \pm 2\% $ può essere dovuta al numero insufficiente di misure prese.
 
 \section*{Dichiarazione}
 I firmatari di questa relazione dichiarano che il contenuto della relazione \`e originale, con misure effettuate dai membri del gruppo, e che tutti i firmatari hanno contribuito alla elaborazione della relazione stessa.
